@@ -2,7 +2,7 @@
   remote_images = ["https://source.unsplash.com/.*", "https://images.unsplash.com/.*", "https://ext.same-assets.com/.*", "https://ugc.same-assets.com/.*"]
 
 [build]
-  command = "npm install --no-save typescript @types/react @types/node && npm run build"
+  command = "npm install && npm install --save-dev autoprefixer postcss tailwindcss && npm run build"
   publish = ".next"
 
 [build.environment]
@@ -11,6 +11,8 @@
   NETLIFY_NEXT_PLUGIN_SKIP = "false"
   ENABLE_MOCK_AI = "true"
   NODE_ENV = "production"
+  NEXTAUTH_URL = "https://your-netlify-subdomain.netlify.app"
+  NEXTAUTH_SECRET = "0b2e2761b24b89ad9f5e55ae3ba2e31df964a0a8dcf6ad0de3d15f2b6aee4bd5"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
@@ -24,4 +26,4 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     X-XSS-Protection = "1; mode=block"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self' https://api.openai.com https://*.vercel-insights.com; img-src 'self' data: https://images.unsplash.com https://source.unsplash.com https://ext.same-assets.com https://ugc.same-assets.com; style-src 'self' 'unsafe-inline'; font-src 'self' data:; frame-ancestors 'none';"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; connect-src 'self'
