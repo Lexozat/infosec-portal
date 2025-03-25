@@ -13,7 +13,6 @@ const nextConfig = {
     // Skip ESLint during builds
     ignoreDuringBuilds: true,
   },
-  swcMinify: true,
 };
 
 export default nextConfig;
