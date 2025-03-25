@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen p-8">
+    <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div className="max-w-3xl w-full">
         <h1 className="text-4xl font-bold mb-6">AI-Driven Information Security Portal</h1>
         
@@ -40,16 +40,7 @@ export default function Home() {
             Start Free Trial
           </button>
         </div>
-        
-        <div className="flex items-center gap-3 mb-4">
-          <div className="bg-blue-600 text-white p-2 rounded-md">IS</div>
-          <span className="font-semibold">InfoSec Portal</span>
-        </div>
-        
-        <p className="text-gray-500">
-          Streamlining information security compliance with AI automation.
-        </p>
       </div>
-    </div>
+    </main>
   );
 }
